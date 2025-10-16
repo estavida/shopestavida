@@ -32,24 +32,30 @@ header {
 
 /* ======== VIDEO SECTION ======== */
 .video-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
+  background-color: #000;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 400px;
+  max-height: 700px;
   overflow: hidden;
-  margin-bottom: 40px;
+  border-radius: 10px;
 }
 
 .promo-video {
-  width: 1080px;
-  height: 1920px;
-  max-width: 100%;
-  max-height: 90vh;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 12px;
   filter: brightness(75%);
-  animation: fadeIn 2s ease forwards;
+  animation: fadeIn 1.5s ease forwards;
 }
+
+
 
 /* ======== PRODUCT LIST (VERTICAL STACK) ======== */
 .product-grid {
