@@ -5,16 +5,14 @@
   box-sizing: border-box;
 }
 
-
 /* ======== HEADER ======== */
 header {
   padding: 30px 0;
   background-color: transparent;
-
 }
 
 .logo {
-  width: 6.5in; /* Large, bold logo */
+  width: 6.5in;
   max-width: 90%;
   height: auto;
   display: block;
@@ -29,7 +27,6 @@ header {
   align-items: center;
   padding: 20px 0;
   background-color: transparent;
-
 }
 
 .video-wrapper {
@@ -48,27 +45,24 @@ header {
   animation: fadeIn 1.5s ease forwards;
 }
 
-
-
 /* ======== PRODUCT LIST (VERTICAL STACK) ======== */
 .product-grid {
   display: flex;
-  flex-direction: column; /* vertical layout */
+  flex-direction: column;
   align-items: center;
   gap: 50px;
   padding: 40px 5%;
   background-color: transparent;
-
 }
 
 /* ======== PRODUCT CARD ======== */
 .product {
-  background-color: #111;
+  background-color: #f8f8f8; /* Light background for contrast */
   border-radius: 12px;
   padding: 30px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
@@ -77,12 +71,12 @@ header {
 
 .product:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .product h2 {
   font-size: 1.3rem;
-  color: #fff;
+  color: #000; /* Dark text */
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
@@ -90,7 +84,7 @@ header {
 .product p {
   font-size: 1rem;
   margin: 10px 0;
-  color: #b3b3b3;
+  color: #333; /* Darker text for readability */
 }
 
 /* ======== IMAGES ======== */
@@ -109,8 +103,8 @@ header {
 /* ======== BUY BUTTON ======== */
 .buy-button {
   display: inline-block;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 6px;
@@ -126,7 +120,7 @@ header {
 
 /* ======== PROMO SECTION ======== */
 .promo-block {
-  background-color: #000;
+  background-color: #fff; /* Light background */
   padding: 50px 5%;
 }
 
@@ -175,8 +169,12 @@ header {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInScale {
@@ -207,33 +205,16 @@ header {
   }
 }
 
-/* ======== GLOBAL BACKGROUND FIX ======== */
-/* ======== BODY ======== */
+/* ======== GLOBAL BACKGROUND ======== */
 body {
   font-family: 'Poppins', sans-serif;
-  color: #f4f4f4;
+  color: #000; /* Main text color */
   line-height: 1.6;
   text-align: center;
   overflow-x: hidden;
   position: relative;
-  background: none; /* important – stops conflict */
+  background-color: #ffffff; /* Solid white background */
 }
 
-/* full-page background image behind everything */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* keeps it behind all content */
-  background-image: url('IMG_1386.png'); /* correct image path */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  opacity: 0.85; /* adjust 0.5–1.0 for brightness */
-}
 
 
