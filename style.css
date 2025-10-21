@@ -8,12 +8,18 @@
 /* ======== BODY ======== */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #000;
+  background-image: url('IMG_1386.png'); /* ← path to your image */
+  background-color: #000; /* fallback color if image doesn’t load */
+  background-repeat: no-repeat;
+  background-size: cover; /* fills the screen, keeps aspect ratio */
+  background-position: center center;
+  background-attachment: fixed;
   color: #f4f4f4;
   line-height: 1.6;
   text-align: center;
   overflow-x: hidden;
 }
+
 
 /* ======== HEADER ======== */
 header {
