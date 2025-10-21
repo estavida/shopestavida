@@ -5,26 +5,12 @@
   box-sizing: border-box;
 }
 
-/* ======== BODY ======== */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-image: url('IMG_1386.png'); /* ← path to your image */
-  background-color: #000; /* fallback color if image doesn’t load */
-  background-repeat: no-repeat;
-  background-size: cover; /* fills the screen, keeps aspect ratio */
-  background-position: center center;
-  background-attachment: fixed;
-  color: #f4f4f4;
-  line-height: 1.6;
-  text-align: center;
-  overflow-x: hidden;
-}
-
 
 /* ======== HEADER ======== */
 header {
   padding: 30px 0;
-  background-color: #000;
+  background-color: transparent;
+
 }
 
 .logo {
@@ -42,7 +28,8 @@ header {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  background-color: #000;
+  background-color: transparent;
+
 }
 
 .video-wrapper {
@@ -70,7 +57,8 @@ header {
   align-items: center;
   gap: 50px;
   padding: 40px 5%;
-  background-color: #0a0a0a;
+  background-color: transparent;
+
 }
 
 /* ======== PRODUCT CARD ======== */
@@ -218,4 +206,34 @@ header {
     width: 95%;
   }
 }
+
+/* ======== GLOBAL BACKGROUND FIX ======== */
+/* ======== BODY ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f4f4f4;
+  line-height: 1.6;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  background: none; /* important – stops conflict */
+}
+
+/* full-page background image behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* keeps it behind all content */
+  background-image: url('IMG_1386.png'); /* correct image path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  opacity: 0.85; /* adjust 0.5–1.0 for brightness */
+}
+
 
